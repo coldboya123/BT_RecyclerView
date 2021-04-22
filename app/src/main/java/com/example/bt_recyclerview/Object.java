@@ -14,6 +14,16 @@ public class Object {
         this.listVoucher = listVoucher;
     }
 
+    @Override
+    public String toString() {
+        return "Object{" +
+                "img=" + img +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", listVoucher=" + listVoucher +
+                '}';
+    }
+
     public void setImg(int img) {
         this.img = img;
     }
