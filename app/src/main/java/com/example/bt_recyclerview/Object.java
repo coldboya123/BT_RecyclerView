@@ -1,6 +1,7 @@
 package com.example.bt_recyclerview;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Object {
     private int img;
@@ -22,6 +23,12 @@ public class Object {
                 ", address='" + address + '\'' +
                 ", listVoucher=" + listVoucher +
                 '}';
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(img, name, address, listVoucher);
     }
 
     public void setImg(int img) {

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Objects;
 
 public class RCV_Adapter extends RecyclerView.Adapter<RCV_Adapter.ViewHolder> {
 
@@ -40,6 +41,12 @@ public class RCV_Adapter extends RecyclerView.Adapter<RCV_Adapter.ViewHolder> {
                 holder.recyclerView.setAdapter(new ItemAdapter(context, list, R.layout.itemview_2_layout));
                 break;
         }
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(context, list);
     }
 
     @Override
